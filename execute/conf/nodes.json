@@ -30,8 +30,13 @@
             "password"      : "123456",
             "user"          : "root",
             "coremark"      : "371384"
+        },
+	"Fog-1" : {
+            "node"    : "Fog-1",
+            "password"      : "123456",
+            "user"          : "root",
+            "coremark"      : "371384"
         }
-
 	
       }
 }
