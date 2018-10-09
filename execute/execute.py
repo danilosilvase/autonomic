@@ -11,7 +11,7 @@ startTime = datetime.now()
 
 ##Init Variables
 
-nodes = json.load(open("conf/nodes.json"))
+nodes = json.load(open("/autonomic/conf/nodes.json"))
 workers_node = nodes["workers"]
 workers_node_names = workers_node.keys()
 
