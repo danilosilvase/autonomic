@@ -10,13 +10,22 @@
 
 
 ****************************************     CONNECT TO ORIGIN        ****************************************
-Error response from daemon: No such container: mqttserver
+
+mqttserver
 
 
+Edge-1.1
 
-Edge-1.2
+
+mqttserver
 
 
 
 
 ****************************************     CONNECT TO DESTINATION       ****************************************
+
+mqttserver
+
+
+mqttserver
+
