@@ -12,6 +12,10 @@ from datetime import datetime
 from threading import Thread
 from random import choice
 
+#current_time=$(date "+%Y.%m.%d-%H.%M.%S")
+
+#file_name=test_files.log
+
 
 startTime = datetime.now()
 
@@ -22,7 +26,7 @@ workers_node = nodes["workers"]
 workers_node_names = workers_node.keys()
 
 
-log_file = open("execute_log","w")
+log_file = open("execute.log","w")
 
 
 print
@@ -77,9 +81,9 @@ ssh.connect( hostname = host, username = user, password = password)
 
 ## saida do comando
 
-#stdin, stdout, stderr = ssh.exec_command('docker run -d --net=rede  --name mqttserver --security-opt seccomp:unconfined eclipse-mosquitto\n')
-#log_file.write(stderr.read()+"\n")
-#log_file.write(stdout.read()+"\n")
+stdin, stdout, stderr = ssh.exec_command('docker run -d --net=rede  --name mqttserver --security-opt seccomp:unconfined eclipse-mosquitto\n')
+log_file.write(stderr.read()+"\n")
+log_file.write(stdout.read()+"\n")
 
 stdin, stdout, stderr = ssh.exec_command('docker start mqttserver\n')
 log_file.write(stderr.read()+"\n")
