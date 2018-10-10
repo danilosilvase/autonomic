@@ -1,0 +1,21 @@
+
+
+
+****************************************     START PLACEMENT    ****************************************
+
+
+
+****************************************     START APP        ****************************************
+docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container 37e102dd45dbcb426877314beb8c2f202c4ca7c409a5c83edbb28c1488921d40. You have to remove (or rename) that container to be able to reuse that name..
+See 'docker run --help'.
+
+
+
+mqttserver
+
+
+Edge-2.2
+
+
+mqttserver
+
