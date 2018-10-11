@@ -6,6 +6,91 @@
 
 
 ****************************************     START APP        ****************************************
+docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container 115e6c6b0ce25e59df6e96bd6f6344741bad79112a2da9245b5744acb87d2852. You have to remove (or rename) that container to be able to reuse that name..
+See 'docker run --help'.
+
+
+
+mqttserver
+
+
+Edge-2.1
+
+
+mqttserver
+
+
+
+
+****************************************     START APP        ****************************************
+docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container 1623012ebf328f2b8696efd22a62d477edf90d7b423f92539be554e20ce2456d. You have to remove (or rename) that container to be able to reuse that name..
+See 'docker run --help'.
+
+
+
+mqttserver
+
+
+Edge-1.2
+
+
+mqttserver
+
+
+
+
+****************************************     START APP        ****************************************
+docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container b279cc283b671c5dc26aacd81c9a2076350e5396312afe2e5667744ac7d11e57. You have to remove (or rename) that container to be able to reuse that name..
+See 'docker run --help'.
+
+
+
+mqttserver
+
+
+Edge-1.4
+
+
+mqttserver
+
+
+
+
+****************************************     START APP        ****************************************
+docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container 147d5b8d137b0c519ef7d94f1a0cea4b85c094bc51786a2e9a1cab56dfee782c. You have to remove (or rename) that container to be able to reuse that name..
+See 'docker run --help'.
+
+
+
+mqttserver
+
+
+Edge-1.1
+
+
+mqttserver
+
+
+
+
+****************************************     START APP        ****************************************
+docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container f20ab2a269566b524cf74787750c0009aa02fc8241a37952456bb5623122b86f. You have to remove (or rename) that container to be able to reuse that name..
+See 'docker run --help'.
+
+
+
+mqttserver
+
+
+Edge-1.3
+
+
+mqttserver
+
+
+
+
+****************************************     START APP        ****************************************
 docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container 37e102dd45dbcb426877314beb8c2f202c4ca7c409a5c83edbb28c1488921d40. You have to remove (or rename) that container to be able to reuse that name..
 See 'docker run --help'.
 
@@ -19,3 +104,228 @@ Edge-2.2
 
 mqttserver
 
+
+
+
+****************************************     START APP        ****************************************
+docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container b35b765a86eeb66b6056f8baa0d5134515bf38fe1de2ae07e0f3c19796028457. You have to remove (or rename) that container to be able to reuse that name..
+See 'docker run --help'.
+
+
+
+mqttserver
+
+
+Fog-1
+
+
+mqttserver
+
+
+
+
+****************************************     START APP        ****************************************
+docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container b35b765a86eeb66b6056f8baa0d5134515bf38fe1de2ae07e0f3c19796028457. You have to remove (or rename) that container to be able to reuse that name..
+See 'docker run --help'.
+
+
+
+mqttserver
+
+
+Fog-1
+
+
+mqttserver
+
+
+
+
+****************************************     START APP        ****************************************
+docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container b35b765a86eeb66b6056f8baa0d5134515bf38fe1de2ae07e0f3c19796028457. You have to remove (or rename) that container to be able to reuse that name..
+See 'docker run --help'.
+
+
+
+mqttserver
+
+
+Fog-1
+
+
+mqttserver
+
+
+
+
+****************************************     START APP        ****************************************
+docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container 5b422818225c2f4e8497f1d48132fa0e9cfc2c5ba2066f0d57f07c5ac33fd64b. You have to remove (or rename) that container to be able to reuse that name..
+See 'docker run --help'.
+
+
+
+mqttserver
+
+
+Edge-2.4
+
+
+mqttserver
+
+
+
+
+****************************************     START APP        ****************************************
+docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container b279cc283b671c5dc26aacd81c9a2076350e5396312afe2e5667744ac7d11e57. You have to remove (or rename) that container to be able to reuse that name..
+See 'docker run --help'.
+
+
+
+mqttserver
+
+
+Edge-1.4
+
+
+mqttserver
+
+
+
+
+****************************************     START APP        ****************************************
+docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container b35b765a86eeb66b6056f8baa0d5134515bf38fe1de2ae07e0f3c19796028457. You have to remove (or rename) that container to be able to reuse that name..
+See 'docker run --help'.
+
+
+
+mqttserver
+
+
+Fog-1
+
+
+mqttserver
+
+
+
+
+****************************************     START APP        ****************************************
+docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container b279cc283b671c5dc26aacd81c9a2076350e5396312afe2e5667744ac7d11e57. You have to remove (or rename) that container to be able to reuse that name..
+See 'docker run --help'.
+
+
+
+mqttserver
+
+
+Edge-1.4
+
+
+mqttserver
+
+
+
+
+****************************************     START APP        ****************************************
+docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container b35b765a86eeb66b6056f8baa0d5134515bf38fe1de2ae07e0f3c19796028457. You have to remove (or rename) that container to be able to reuse that name..
+See 'docker run --help'.
+
+
+
+mqttserver
+
+
+Fog-1
+
+
+mqttserver
+
+
+
+
+****************************************     START APP        ****************************************
+docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container 115e6c6b0ce25e59df6e96bd6f6344741bad79112a2da9245b5744acb87d2852. You have to remove (or rename) that container to be able to reuse that name..
+See 'docker run --help'.
+
+
+
+mqttserver
+
+
+Edge-2.1
+
+
+mqttserver
+
+
+
+
+****************************************     START APP        ****************************************
+docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container 39bc9b1d29562b1892dc25b557683b3b406675feb9713d74c3703f5c412c0a63. You have to remove (or rename) that container to be able to reuse that name..
+See 'docker run --help'.
+
+
+
+mqttserver
+
+
+Edge-2.3
+
+
+mqttserver
+
+
+
+
+****************************************     START APP        ****************************************
+docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container 115e6c6b0ce25e59df6e96bd6f6344741bad79112a2da9245b5744acb87d2852. You have to remove (or rename) that container to be able to reuse that name..
+See 'docker run --help'.
+
+
+
+mqttserver
+
+
+Edge-2.1
+
+
+mqttserver
+
+
+
+
+****************************************     START APP        ****************************************
+docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container ee845976cc06e055ae186885d4c0b20d7912516f4a56647b38093216362f7050. You have to remove (or rename) that container to be able to reuse that name..
+See 'docker run --help'.
+
+
+
+mqttserver
+
+
+Fog-2
+
+
+mqttserver
+
+
+
+
+****************************************     START APP        ****************************************
+docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container 115e6c6b0ce25e59df6e96bd6f6344741bad79112a2da9245b5744acb87d2852. You have to remove (or rename) that container to be able to reuse that name..
+See 'docker run --help'.
+
+
+
+mqttserver
+
+
+Edge-2.1
+
+
+mqttserver
+
+
+
+
+****************************************   

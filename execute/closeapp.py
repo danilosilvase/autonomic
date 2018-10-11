@@ -1,4 +1,3 @@
-
 #!/bin/env python
 #coding: utf8
 
@@ -13,10 +12,10 @@ from datetime import datetime
 from threading import Thread
 from random import choice
 
+#current_time=$(date "+%Y.%m.%d-%H.%M.%S")
 
-#start_time = time.time()
+#file_name=test_files.log
 
-#print("--- %s seconds ---" % (time.time() - start_time))
 
 startTime = datetime.now()
 
@@ -27,7 +26,7 @@ workers_node = nodes["workers"]
 workers_node_names = workers_node.keys()
 
 
-log_file = open("execute.log","w")
+log_file = open("closeapp.log","w")
 
 
 print
@@ -42,11 +41,9 @@ print
 
 
 log_file.write("\n\n\n****************************************     START PLACEMENT    ****************************************\n")
-#stop_app = time.time()
 
 while 1:
     time.sleep(.1)
-#    start_time = time.time()
 
 #    for i in symbols:
 
@@ -55,7 +52,7 @@ while 1:
     print "                Choice Fog node                "
     print "+++++++++++++++++++++++++++++++++++++++++++++++"
     print
-    
+
 
     placement=choice(workers_node_names)
 
@@ -88,37 +85,26 @@ while 1:
     ssh.connect( hostname = host, username = user, password = password)
 
 ## saida do comando
-    
-   # start_app = time.time()
-    stdin, stdout, stderr = ssh.exec_command('docker run -d --net=rede  --name mqttserver --security-opt seccomp:unconfined eclipse-mosquitto\n')
-    log_file.write(stderr.read()+"\n")
-    log_file.write(stdout.read()+"\n")
-    start_time = time.time()
-    start_app = time.time()
-    print("--- %s seconds ---" % (time.time() - start_app))
-  #  print("--- %s seconds ---" % (time.time() - start_time))
-#    log_file.write("--- %s seconds ---" % (time.time() - start_app))        
 
-    stdin, stdout, stderr = ssh.exec_command('docker start mqttserver\n')
-    log_file.write(stderr.read()+"\n")
-    log_file.write(stdout.read()+"\n")
+#    stdin, stdout, stderr = ssh.exec_command('docker run -d --net=rede  --name mqttserver --security-opt seccomp:unconfined eclipse-mosquitto\n')
+#    log_file.write(stderr.read()+"\n")
+#    log_file.write(stdout.read()+"\n")
 
-    stdin, stdout, stderr = ssh.exec_command('hostname\n')
-    log_file.write(stderr.read()+"\n")
-    log_file.write(stdout.read()+"\n")
+#    stdin, stdout, stderr = ssh.exec_command('docker start mqttserver\n')
+#    log_file.write(stderr.read()+"\n")
+#    log_file.write(stdout.read()+"\n")
 
-    time.sleep( 120 )
-    
+#    stdin, stdout, stderr = ssh.exec_command('hostname\n')
+#    log_file.write(stderr.read()+"\n")
+#    log_file.write(stdout.read()+"\n")
+
+#    time.sleep( 60 )
+
     stdin, stdout, stderr = ssh.exec_command('docker stop mqttserver\n')
     log_file.write(stderr.read()+"\n")
     log_file.write(stdout.read()+"\n")
-    stop_app = time.time()
-    print("--- %s seconds ---" % (time.time() - stop_app))
-#    log_file.write("--- %s seconds ---" % (stop_app() - start_app))
-    print("--- %s seconds ---" % (time.time() - start_time))
-#    log_file.write("--- %s seconds ---" % (time.time() - start_time))
-    ssh.close()
 
+    ssh.close()
 
 
 
