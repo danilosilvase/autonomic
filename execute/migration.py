@@ -103,24 +103,29 @@ while 1:
     log_file.write(stdout.read()+"\n")
     
 
-## Regitro Final do tempo - Algoritmo
+## Regitro Final do tempo - Deploy
     stopDeploy = datetime.now()
     print "Deploy Time"
     print stopDeploy - startDeploy
 
 
-## Registro inicial de tempo - Deploy
-    startService = datetime.now()
+## Registro inicial de tempo - Checkpoint
+    startCheck = datetime.now()
 
-    stdin, stdout, stderr = ssh.exec_command('docker start mqttserver\n')
+    stdin, stdout, stderr = ssh.exec_command('rm -rf checkpoint1\n')
     log_file.write(stderr.read()+"\n")
     log_file.write(stdout.read()+"\n")
 
 
-## Regitro Final do tempo - Algoritmo
-    stopService = datetime.now()
-    print "Start Time Service"
-    print stopService - startService
+    stdin, stdout, stderr = ssh.exec_command('docker checkpoint create --checkpoint-dir=/work looper checkpoint1\n')
+    log_file.write(stderr.read()+"\n")
+    log_file.write(stdout.read()+"\n")
+
+
+## Regitro Final do tempo - Checkpoint
+    stopCheck = datetime.now()
+    print "Start Time Checkpoint"
+    print stopCheck - startCheck
 
 
     stdin, stdout, stderr = ssh.exec_command('hostname\n')

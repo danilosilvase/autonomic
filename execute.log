@@ -6,7 +6,47 @@
 
 
 ****************************************     START APP        ****************************************
-docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container e10af8a9ffa75c78dd2ff05d0c508564288ba6742e57372845aa6fd71901bf4d. You have to remove (or rename) that container to be able to reuse that name..
+docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container 5606c60313c6b8685e1a84250fca1b74ee1245c649c2c52a4e0bbe2ea7b5e239. You have to remove (or rename) that container to be able to reuse that name..
 See 'docker run --help'.
 
+
+
+
+Error response from daemon: No such container: looper
+
+
+
+Edge-1.2
+
+
+mqttserver
+
+
+
+
+****************************************     START APP        ****************************************
+Unable to find image 'eclipse-mosquitto:latest' locally
+latest: Pulling from library/eclipse-mosquitto
+605ce1bd3f31: Pulling fs layer
+ad67714bea01: Pulling fs layer
+d2ddf5912b7f: Pulling fs layer
+d2ddf5912b7f: Download complete
+ad67714bea01: Download complete
+605ce1bd3f31: Verifying Checksum
+605ce1bd3f31: Download complete
+605ce1bd3f31: Pull complete
+ad67714bea01: Pull complete
+d2ddf5912b7f: Pull complete
+Digest: sha256:bb177e7bd81746fc59b919ccb84b6ffffbe1ec1f7f933fa68c3aca4b4be364b6
+Status: Downloaded newer image for eclipse-mosquitto:latest
+
+acf365dc3fca13a555e6905c80b2241ad1dae1284cfd58fb5b1bd3e9f85c7740
+
+
+
+Error response from daemon: No such container: looper
+
+
+
+Fog-2
 
