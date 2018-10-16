@@ -6,97 +6,28 @@
 
 
 ****************************************     START APP        ****************************************
-docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container 115e6c6b0ce25e59df6e96bd6f6344741bad79112a2da9245b5744acb87d2852. You have to remove (or rename) that container to be able to reuse that name..
-See 'docker run --help'.
+Unable to find image 'eclipse-mosquitto:latest' locally
+latest: Pulling from library/eclipse-mosquitto
+605ce1bd3f31: Pulling fs layer
+ad67714bea01: Pulling fs layer
+d2ddf5912b7f: Pulling fs layer
+d2ddf5912b7f: Verifying Checksum
+d2ddf5912b7f: Download complete
+ad67714bea01: Download complete
+605ce1bd3f31: Verifying Checksum
+605ce1bd3f31: Download complete
+605ce1bd3f31: Pull complete
+ad67714bea01: Pull complete
+d2ddf5912b7f: Pull complete
+Digest: sha256:bb177e7bd81746fc59b919ccb84b6ffffbe1ec1f7f933fa68c3aca4b4be364b6
+Status: Downloaded newer image for eclipse-mosquitto:latest
+docker: Error response from daemon: Could not attach to network rede: rpc error: code = 5 desc = network rede not found.
 
+22819fc4dfc02213a00f5e03c1605052a4a55b2e6135787abc112a44dc18fd21
 
+Error response from daemon: Could not attach to network rede: rpc error: code = 5 desc = network rede not found
+Error: failed to start containers: mqttserver
 
-mqttserver
-
-
-Edge-2.1
-
-
-mqttserver
-
-
-
-
-****************************************     START APP        ****************************************
-docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container 1623012ebf328f2b8696efd22a62d477edf90d7b423f92539be554e20ce2456d. You have to remove (or rename) that container to be able to reuse that name..
-See 'docker run --help'.
-
-
-
-mqttserver
-
-
-Edge-1.2
-
-
-mqttserver
-
-
-
-
-****************************************     START APP        ****************************************
-docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container b279cc283b671c5dc26aacd81c9a2076350e5396312afe2e5667744ac7d11e57. You have to remove (or rename) that container to be able to reuse that name..
-See 'docker run --help'.
-
-
-
-mqttserver
-
-
-Edge-1.4
-
-
-mqttserver
-
-
-
-
-****************************************     START APP        ****************************************
-docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container 147d5b8d137b0c519ef7d94f1a0cea4b85c094bc51786a2e9a1cab56dfee782c. You have to remove (or rename) that container to be able to reuse that name..
-See 'docker run --help'.
-
-
-
-mqttserver
-
-
-Edge-1.1
-
-
-mqttserver
-
-
-
-
-****************************************     START APP        ****************************************
-docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container f20ab2a269566b524cf74787750c0009aa02fc8241a37952456bb5623122b86f. You have to remove (or rename) that container to be able to reuse that name..
-See 'docker run --help'.
-
-
-
-mqttserver
-
-
-Edge-1.3
-
-
-mqttserver
-
-
-
-
-****************************************     START APP        ****************************************
-docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container 37e102dd45dbcb426877314beb8c2f202c4ca7c409a5c83edbb28c1488921d40. You have to remove (or rename) that container to be able to reuse that name..
-See 'docker run --help'.
-
-
-
-mqttserver
 
 
 Edge-2.2
@@ -108,15 +39,16 @@ mqttserver
 
 
 ****************************************     START APP        ****************************************
-docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container b35b765a86eeb66b6056f8baa0d5134515bf38fe1de2ae07e0f3c19796028457. You have to remove (or rename) that container to be able to reuse that name..
+docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container 7028e6e58f8a023fad7e4f9d1893fc405b7e1639991db10bd970365076e39944. You have to remove (or rename) that container to be able to reuse that name..
 See 'docker run --help'.
 
 
+Error response from daemon: Could not attach to network rede: rpc error: code = 5 desc = network rede not found
+Error: failed to start containers: mqttserver
 
-mqttserver
 
 
-Fog-1
+Edge-1.4
 
 
 mqttserver
@@ -125,46 +57,13 @@ mqttserver
 
 
 ****************************************     START APP        ****************************************
-docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container b35b765a86eeb66b6056f8baa0d5134515bf38fe1de2ae07e0f3c19796028457. You have to remove (or rename) that container to be able to reuse that name..
+docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container b3aa00a492968e10c56ff4227a66a676cbad10d32bf51d08f9913d42b0abba21. You have to remove (or rename) that container to be able to reuse that name..
 See 'docker run --help'.
 
 
+Error response from daemon: Could not attach to network rede: rpc error: code = 5 desc = network rede not found
+Error: failed to start containers: mqttserver
 
-mqttserver
-
-
-Fog-1
-
-
-mqttserver
-
-
-
-
-****************************************     START APP        ****************************************
-docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container b35b765a86eeb66b6056f8baa0d5134515bf38fe1de2ae07e0f3c19796028457. You have to remove (or rename) that container to be able to reuse that name..
-See 'docker run --help'.
-
-
-
-mqttserver
-
-
-Fog-1
-
-
-mqttserver
-
-
-
-
-****************************************     START APP        ****************************************
-docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container 5b422818225c2f4e8497f1d48132fa0e9cfc2c5ba2066f0d57f07c5ac33fd64b. You have to remove (or rename) that container to be able to reuse that name..
-See 'docker run --help'.
-
-
-
-mqttserver
 
 
 Edge-2.4
@@ -176,12 +75,13 @@ mqttserver
 
 
 ****************************************     START APP        ****************************************
-docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container b279cc283b671c5dc26aacd81c9a2076350e5396312afe2e5667744ac7d11e57. You have to remove (or rename) that container to be able to reuse that name..
+docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container 7028e6e58f8a023fad7e4f9d1893fc405b7e1639991db10bd970365076e39944. You have to remove (or rename) that container to be able to reuse that name..
 See 'docker run --help'.
 
 
+Error response from daemon: Could not attach to network rede: rpc error: code = 5 desc = network rede not found
+Error: failed to start containers: mqttserver
 
-mqttserver
 
 
 Edge-1.4
@@ -193,15 +93,16 @@ mqttserver
 
 
 ****************************************     START APP        ****************************************
-docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container b35b765a86eeb66b6056f8baa0d5134515bf38fe1de2ae07e0f3c19796028457. You have to remove (or rename) that container to be able to reuse that name..
+docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container ab483efb25f6541e795f5ac1d498940e539640cc02ab4b3a809564a505c60331. You have to remove (or rename) that container to be able to reuse that name..
 See 'docker run --help'.
 
 
+Error response from daemon: Could not attach to network rede: rpc error: code = 5 desc = network rede not found
+Error: failed to start containers: mqttserver
 
-mqttserver
 
 
-Fog-1
+Edge-1.3
 
 
 mqttserver
@@ -210,15 +111,16 @@ mqttserver
 
 
 ****************************************     START APP        ****************************************
-docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container b279cc283b671c5dc26aacd81c9a2076350e5396312afe2e5667744ac7d11e57. You have to remove (or rename) that container to be able to reuse that name..
+docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container 22819fc4dfc02213a00f5e03c1605052a4a55b2e6135787abc112a44dc18fd21. You have to remove (or rename) that container to be able to reuse that name..
 See 'docker run --help'.
 
 
+Error response from daemon: Could not attach to network rede: rpc error: code = 5 desc = network rede not found
+Error: failed to start containers: mqttserver
 
-mqttserver
 
 
-Edge-1.4
+Edge-2.2
 
 
 mqttserver
@@ -227,105 +129,3 @@ mqttserver
 
 
 ****************************************     START APP        ****************************************
-docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container b35b765a86eeb66b6056f8baa0d5134515bf38fe1de2ae07e0f3c19796028457. You have to remove (or rename) that container to be able to reuse that name..
-See 'docker run --help'.
-
-
-
-mqttserver
-
-
-Fog-1
-
-
-mqttserver
-
-
-
-
-****************************************     START APP        ****************************************
-docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container 115e6c6b0ce25e59df6e96bd6f6344741bad79112a2da9245b5744acb87d2852. You have to remove (or rename) that container to be able to reuse that name..
-See 'docker run --help'.
-
-
-
-mqttserver
-
-
-Edge-2.1
-
-
-mqttserver
-
-
-
-
-****************************************     START APP        ****************************************
-docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container 39bc9b1d29562b1892dc25b557683b3b406675feb9713d74c3703f5c412c0a63. You have to remove (or rename) that container to be able to reuse that name..
-See 'docker run --help'.
-
-
-
-mqttserver
-
-
-Edge-2.3
-
-
-mqttserver
-
-
-
-
-****************************************     START APP        ****************************************
-docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container 115e6c6b0ce25e59df6e96bd6f6344741bad79112a2da9245b5744acb87d2852. You have to remove (or rename) that container to be able to reuse that name..
-See 'docker run --help'.
-
-
-
-mqttserver
-
-
-Edge-2.1
-
-
-mqttserver
-
-
-
-
-****************************************     START APP        ****************************************
-docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container ee845976cc06e055ae186885d4c0b20d7912516f4a56647b38093216362f7050. You have to remove (or rename) that container to be able to reuse that name..
-See 'docker run --help'.
-
-
-
-mqttserver
-
-
-Fog-2
-
-
-mqttserver
-
-
-
-
-****************************************     START APP        ****************************************
-docker: Error response from daemon: Conflict. The container name "/mqttserver" is already in use by container 115e6c6b0ce25e59df6e96bd6f6344741bad79112a2da9245b5744acb87d2852. You have to remove (or rename) that container to be able to reuse that name..
-See 'docker run --help'.
-
-
-
-mqttserver
-
-
-Edge-2.1
-
-
-mqttserver
-
-
-
-
-****************************************   

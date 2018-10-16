@@ -13,12 +13,8 @@ from datetime import datetime
 from threading import Thread
 from random import choice
 
-
-#start_time = time.time()
-
-#print("--- %s seconds ---" % (time.time() - start_time))
-
 startTime = datetime.now()
+start = time.time()
 
 ##Init Variables
 
@@ -46,21 +42,29 @@ log_file.write("\n\n\n****************************************     START PLACEME
 
 while 1:
     time.sleep(.1)
-#    start_time = time.time()
 
-#    for i in symbols:
 
     print
     print "+++++++++++++++++++++++++++++++++++++++++++++++"
     print "                Choice Fog node                "
     print "+++++++++++++++++++++++++++++++++++++++++++++++"
     print
-    
 
+## Registro inicial de tempo - Algoritmo
+    startChoice = datetime.now()  
+ 
+
+## Escolha do no
     placement=choice(workers_node_names)
-
     print(placement)
 
+## Regitro Final do tempo - Algoritmo
+    stopChoice = datetime.now()
+    print "Choice Time"
+    print stopChoice - startChoice
+
+
+#    print(datetime.now() - startTime)
 
     log_file.write("\n\n\n****************************************     START APP        ****************************************\n")
 
@@ -88,20 +92,36 @@ while 1:
     ssh.connect( hostname = host, username = user, password = password)
 
 ## saida do comando
+
+
+## Registro inicial de tempo - Deploy
+    startDeploy = datetime.now()
     
-   # start_app = time.time()
+
     stdin, stdout, stderr = ssh.exec_command('docker run -d --net=rede  --name mqttserver --security-opt seccomp:unconfined eclipse-mosquitto\n')
     log_file.write(stderr.read()+"\n")
     log_file.write(stdout.read()+"\n")
-    start_time = time.time()
-    start_app = time.time()
-    print("--- %s seconds ---" % (time.time() - start_app))
-  #  print("--- %s seconds ---" % (time.time() - start_time))
-#    log_file.write("--- %s seconds ---" % (time.time() - start_app))        
+    
+
+## Regitro Final do tempo - Algoritmo
+    stopDeploy = datetime.now()
+    print "Deploy Time"
+    print stopDeploy - startDeploy
+
+
+## Registro inicial de tempo - Deploy
+    startService = datetime.now()
 
     stdin, stdout, stderr = ssh.exec_command('docker start mqttserver\n')
     log_file.write(stderr.read()+"\n")
     log_file.write(stdout.read()+"\n")
+
+
+## Regitro Final do tempo - Algoritmo
+    stopService = datetime.now()
+    print "Start Time Service"
+    print stopService - startService
+
 
     stdin, stdout, stderr = ssh.exec_command('hostname\n')
     log_file.write(stderr.read()+"\n")
@@ -112,13 +132,17 @@ while 1:
     stdin, stdout, stderr = ssh.exec_command('docker stop mqttserver\n')
     log_file.write(stderr.read()+"\n")
     log_file.write(stdout.read()+"\n")
-    stop_app = time.time()
-    print("--- %s seconds ---" % (time.time() - stop_app))
-#    log_file.write("--- %s seconds ---" % (stop_app() - start_app))
-    print("--- %s seconds ---" % (time.time() - start_time))
-#    log_file.write("--- %s seconds ---" % (time.time() - start_time))
+
+#   print("--- %s seconds ---" % (time.time() - startTime))
+
     ssh.close()
 
+
+print("Tempo de execucao")
+end = time.time()
+print(end - start)
+
+    
 
 
 
