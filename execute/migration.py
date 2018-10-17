@@ -14,7 +14,7 @@ from threading import Thread
 from random import choice
 
 startTime = datetime.now()
-start = time.time()
+#start = time.time()
 
 ##Init Variables
 
@@ -29,7 +29,7 @@ log_file = open("execute.log","w")
 print
 print
 print ("**************************************************************************")
-print ("                            START PLACEMENT                               ")
+print ("                            START MIGRATION                               ")
 print ("**************************************************************************")
 print
 print
@@ -38,11 +38,11 @@ print
 
 
 log_file.write("\n\n\n****************************************     START PLACEMENT    ****************************************\n")
-#stop_app = time.time()
+
 
 while 1:
     time.sleep(.1)
-
+    start = time.time()
 
     print
     print "+++++++++++++++++++++++++++++++++++++++++++++++"
@@ -52,17 +52,17 @@ while 1:
 
 ## Registro inicial de tempo - Algoritmo
     startChoice = datetime.now()  
- 
+
 
 ## Escolha do no
-    placement=choice(workers_node_names)
-    print(placement)
+#    placement=choice(workers_node_names)
+#    print(placement)
 
 ## Regitro Final do tempo - Algoritmo
     stopChoice = datetime.now()
     print "Choice Time"
     print stopChoice - startChoice
-
+    print("\n")
 
 #    print(datetime.now() - startTime)
 
@@ -81,9 +81,15 @@ while 1:
 
 #log_file.write("\n\n\n****************************************     CONNECT TO ORIGIN        ****************************************\n")
 
-    host = workers_node[placement]["address"]
-    user = workers_node[placement]["user"]
-    password = workers_node[placement]["password"]
+#    host = workers_node[placement]["address"]
+#    user = workers_node[placement]["user"]
+#    password = workers_node[placement]["password"]
+
+
+    host = workers_node["Fog-1"]["address"]
+    user = workers_node["Fog-1"]["user"]
+    password = workers_node["Fog-1"]["password"]
+
 
 ## conexao remota
 
@@ -94,39 +100,50 @@ while 1:
 ## saida do comando
 
 
+## Registro inicial de tempo - Remover
+    startRemove = datetime.now()
+  
+    stdin, stdout, stderr = ssh.exec_command('docker rm mqttserver\n')
+    log_file.write(stderr.read()+"\n")
+    log_file.write(stdout.read()+"\n")
+
+## Regitro Final do tempo - Remover
+    stopRemove = datetime.now()
+    print "Remove Time"
+    print stopRemove - startRemove
+    print("\n")
+
+
 ## Registro inicial de tempo - Deploy
     startDeploy = datetime.now()
     
-
     stdin, stdout, stderr = ssh.exec_command('docker run -d --net=rede  --name mqttserver --security-opt seccomp:unconfined eclipse-mosquitto\n')
     log_file.write(stderr.read()+"\n")
     log_file.write(stdout.read()+"\n")
     
-
 ## Regitro Final do tempo - Deploy
     stopDeploy = datetime.now()
     print "Deploy Time"
     print stopDeploy - startDeploy
-
+    print("\n")
 
 ## Registro inicial de tempo - Checkpoint
     startCheck = datetime.now()
 
-    stdin, stdout, stderr = ssh.exec_command('rm -rf checkpoint1\n')
+    stdin, stdout, stderr = ssh.exec_command('rm -rf /work/checkpoint1\n')
     log_file.write(stderr.read()+"\n")
     log_file.write(stdout.read()+"\n")
 
-
-    stdin, stdout, stderr = ssh.exec_command('docker checkpoint create --checkpoint-dir=/work looper checkpoint1\n')
+    stdin, stdout, stderr = ssh.exec_command('docker checkpoint create --checkpoint-dir=/work mqttserver checkpoint1\n')
     log_file.write(stderr.read()+"\n")
     log_file.write(stdout.read()+"\n")
 
 
 ## Regitro Final do tempo - Checkpoint
     stopCheck = datetime.now()
-    print "Start Time Checkpoint"
+    print "Time Checkpoint"
     print stopCheck - startCheck
-
+    print("\n")
 
     stdin, stdout, stderr = ssh.exec_command('hostname\n')
     log_file.write(stderr.read()+"\n")
@@ -134,18 +151,26 @@ while 1:
 
     time.sleep( 120 )
     
+## Registro inicial de tempo - Checkpoint
+    startStop = datetime.now()
+
+
     stdin, stdout, stderr = ssh.exec_command('docker stop mqttserver\n')
     log_file.write(stderr.read()+"\n")
     log_file.write(stdout.read()+"\n")
 
-#   print("--- %s seconds ---" % (time.time() - startTime))
+## Regitro Final do tempo - Checkpoint
+    stopStop = datetime.now()
+    print "Stop Time"
+    print stopStop - startStop
+  print("\n")
 
     ssh.close()
-
 
     print("Tempo de execucao")
     end = time.time()
     print(end - start)
+    print("\n")
 
     
 
