@@ -119,7 +119,7 @@ while 1:
 ## Registro inicial de tempo - Deploy
     startDeploy = datetime.now()
     
-    stdin, stdout, stderr = ssh.exec_command('docker run -d --name mqttserver --security-opt seccomp:unconfined busybox /bin/sh -c 'i=0; while true; do echo $i; i=$(expr $i + 1); sleep 1; done'')
+    stdin, stdout, stderr = ssh.exec_command('docker run -d --net=auto  --name mqttserver --security-opt seccomp:unconfined eclipse-mosquitto\n')
     log_file.write(stderr.read()+"\n")
     log_file.write(stdout.read()+"\n")
     
@@ -138,11 +138,11 @@ while 1:
     log_file.write(stderr.read()+"\n")
     log_file.write(stdout.read()+"\n")
 
-    stdin, stdout, stderr = sshD.exec_command('docker rmi busybox\n')
+    stdin, stdout, stderr = sshD.exec_command('docker rmi eclipse-mosquitto\n')
     log_file.write(stderr.read()+"\n")
     log_file.write(stdout.read()+"\n")
 
-    stdin, stdout, stderr = sshD.exec_command('docker pull busybox\n')
+    stdin, stdout, stderr = sshD.exec_command('docker pull eclipse-mosquitto\n')
     log_file.write(stderr.read()+"\n")
     log_file.write(stdout.read()+"\n")
 
@@ -214,7 +214,7 @@ while 1:
 ## Registro inicial de tempo - Deploy
     startDeploy = datetime.now()
 
-    stdin, stdout, stderr = sshD.exec_command('docker run -d --name mqttserver --security-opt seccomp:unconfined busybox /bin/sh -c 'i=0; while true; do echo $i; i=$(expr $i + 1); sleep 1; done'\n')
+    stdin, stdout, stderr = sshD.exec_command('docker create --net=auto  --name mqttserver --security-opt seccomp:unconfined eclipse-mosquitto\n')
     log_file.write(stderr.read()+"\n")
     log_file.write(stdout.read()+"\n")
 
