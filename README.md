@@ -16,4 +16,9 @@ https://github.com/dream-lab/VIoLET
 
 https://github.com/dream-lab/riot-bench
 
+# Dashboard
+
+![alt text](https://raw.githubusercontent.com/danilosilvase/autonomic/master/path/to/grafana_fog.png)
+
+
 
