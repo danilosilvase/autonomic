@@ -18,7 +18,9 @@ https://github.com/dream-lab/riot-bench
 
 # Dashboard
 
-![alt text](https://raw.githubusercontent.com/danilosilvase/autonomic/master/path/to/grafana_fog.png)
+![alt text](https://github.com/danilosilvase/autonomic/blob/master/grafana_fog.png)
+
+https://github.com/danilosilvase/autonomic/blob/master/grafana_fog.png
 
 
 
